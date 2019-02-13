@@ -1,0 +1,26 @@
+{
+  "name": "fs-challenge",
+  "version": "1.0.0",
+  "description": "full stack challenge",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/.bin/babel-node app.js",
+    "devstart": "node_modules/.bin/nodemon app.js --exec babel-node --",
+    "test": "mocha --require babel-polyfill --require babel-register --timeout 60000"
+  },
+  "author": "juliekd",
+  "license": "ISC",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "chai": "^4.2.0",
+    "chai-http": "^4.2.1",
+    "express": "^4.16.4",
+    "mocha": "^5.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}
