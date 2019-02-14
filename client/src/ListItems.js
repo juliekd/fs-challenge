@@ -2,21 +2,24 @@ import React from 'react';
 import './App.css';
 
 const ListItems = (props) => {
+    var options = '';
     if (props.results.errors.length > 0) {
-        const options = props.results.errors.map((item) => (
+        options = props.results.errors.map((item) => (
             <li key={item}>
                 {item}
             </li>
         ))
-        return <ul>{options}</ul>
+    } else if (props.results.list.length === 0) {
+        options = <li>This number has no previous primes</li>
     } else {
-        const options = props.results.list.map((item) => (
+        options = props.results.list.map((item) => (
             <li key={item}>
                 {item}
             </li>
         ))
-        return <ul>{options}</ul>
     }
+    return <ul>{options}</ul>
+
     
 }
 

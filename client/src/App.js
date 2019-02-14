@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import ListItems from './ListItems';
-import './App.css';
 
 class App extends Component {
     constructor(props) {
@@ -36,11 +35,12 @@ class App extends Component {
     }
 
     render() {
+        
         return (
             <div>
+                <h2>Enter a value</h2>
                 <form onSubmit={this.handleSubmit}>
                     <label>
-                        Enter a value:
                         <textarea value={this.state.num_value} onChange={this.handleChange} />
                     </label>
                     <input type="submit" value="Submit" />
